@@ -14,15 +14,22 @@ function timer() {
     mili_head.innerHTML = mili_sec;
     if (mili_sec >= 100) {
         sec++;
-        sec_head.innerHTML = sec;
+        if (sec <= 9) {
+            sec_head.innerHTML = '0' + sec;
+        } else {
+            sec_head.innerHTML = sec;
+        }
         mili_sec = 0;
     } else if (sec >= 60) {
         min++;
-        min_head.innerHTML = min;
+        if (min <= 9) {
+            min_head.innerHTML = '0' + min;
+        } else {
+            min_head.innerHTML = min;
+        }
         sec = 0;
     }
 };
-
 
 starts.addEventListener('click', function() {
     interval = setInterval(timer, 10);
