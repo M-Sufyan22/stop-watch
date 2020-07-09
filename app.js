@@ -44,9 +44,9 @@ stops.addEventListener('click', function() {
 });
 
 resets.addEventListener('click', function() {
-    min = 0;
-    sec = 0;
-    mili_sec = 0;
+    min = 0 +'0';
+    sec = 0+'0';
+    mili_sec = 0+'0';
     mili_head.innerHTML = mili_sec;
     sec_head.innerHTML = sec;
     min_head.innerHTML = min;
